@@ -6,11 +6,11 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:46:14 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 15:08:44 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/06/28 16:13:51 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	numlen(int n)
 {

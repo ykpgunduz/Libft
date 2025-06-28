@@ -6,11 +6,10 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:45:13 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 15:55:42 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/06/28 16:12:10 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

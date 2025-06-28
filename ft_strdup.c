@@ -6,11 +6,10 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:45:23 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 15:59:26 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/06/28 16:12:35 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)

@@ -6,11 +6,11 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:45:44 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 15:59:26 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/06/28 16:13:37 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

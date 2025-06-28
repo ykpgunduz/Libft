@@ -6,18 +6,18 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:44:59 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 14:32:22 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/06/28 15:40:09 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0')
-	{
+	while (s[i])
 		i++;
-	}
 	return (i);
 }

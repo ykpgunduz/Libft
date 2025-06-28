@@ -6,19 +6,19 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:45:26 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 14:39:21 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/06/28 15:55:42 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	while(*s)
+	while (*s)
 	{
-		if(*s == (char)c)
-			return(char *)s;
+		if (*s == (char)c)
+			return ((char *)s);
 		s++;
 	}
-	if((char)c == '\0')
-	return(char *)s;
-	return 0;
+	if ((char)c == '\0')
+		return ((char *)s);
+	return (0);
 }

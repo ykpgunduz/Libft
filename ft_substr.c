@@ -6,36 +6,36 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:44:37 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 14:38:09 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/06/28 15:05:55 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *sub;
-	size_t i;
-	size_t slen;
+	char	*sub;
+	size_t	i;
+	size_t	slen;
 
-	if(!s)
-	return 0;
+	if (!s)
+		return (NULL);
 	slen = 0;
-	while(s[slen] != '\0')
-	slen++;
-	if(start >= slen)
-	return(char *)malloc(1);
-	if(len > slen - start)
-	len = slen - start;
-	sub =(char *)malloc(len + 1);
-	if(!sub)
-	return 0;
+	while (s[slen] != '\0')
+		slen++;
+	if (start >= slen)
+		return ((char *)malloc(1));
+	if (len > slen - start)
+		len = slen - start;
+	sub = (char *)malloc(len + 1);
+	if (!sub)
+		return (NULL);
 	i = 0;
-	while(i < len)
-{
-	sub[i] = s[start + i];
-	i++;
-}
+	while (i < len)
+	{
+		sub[i] = s[start + i];
+		i++;
+	}
 	sub[i] = '\0';
-	return sub;
+	return (sub);
 }

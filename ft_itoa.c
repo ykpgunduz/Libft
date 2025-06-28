@@ -6,7 +6,7 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:46:14 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 14:38:09 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/06/28 15:08:44 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,42 @@
 
 static int	numlen(int n)
 {
-	int len = 1;
-	while(n / 10)
+	int	len;
+
+	len = 1;
+	while (n / 10)
 	{
 		len++;
 		n /= 10;
 	}
-	return len;
+	return (len);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	int len;
-	unsigned int nb;
+	char			*str;
+	int				len;
+	unsigned int	nb;
 
 	len = numlen(n);
-	if(n < 0)
-	nb = -n;
+	if (n < 0)
+		nb = -n;
 	else
-	nb = n;
-	if(n < 0)
-	len++;
-	str =(char *)malloc(len + 1);
-	if(!str)
-	return 0;
+		nb = n;
+	if (n < 0)
+		len++;
+	str = (char *)malloc(len + 1);
+	if (!str)
+		return (NULL);
 	str[len] = '\0';
-	if(n == 0)
-	str[0] = '0';
-	if(n < 0)
-	str[0] = '-';
-	while(nb)
+	if (n == 0)
+		str[0] = '0';
+	if (n < 0)
+		str[0] = '-';
+	while (nb)
 	{
 		str[--len] = nb % 10 + '0';
 		nb /= 10;
 	}
-	return str;
+	return (str);
 }

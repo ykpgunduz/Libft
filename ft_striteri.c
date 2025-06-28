@@ -6,19 +6,20 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:45:19 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 13:45:20 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/06/28 15:55:42 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void(*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int i;
-	if(!s || !f)
-	return;
+	unsigned int	i;
+
+	if (!s || !f)
+		return ;
 	i = 0;
-	while(s[i])
-{
-	f(i, &s[i]);
-	i++;
-}
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

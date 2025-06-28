@@ -6,7 +6,7 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:49:39 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 15:55:42 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/06/28 16:09:48 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stddef.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

@@ -6,12 +6,12 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:46:35 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 14:51:02 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/06/28 14:58:19 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

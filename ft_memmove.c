@@ -6,11 +6,11 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:45:57 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 14:38:09 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/06/28 14:58:19 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void *ft_memmove(void *dst, const void *src, size_t len)
 {

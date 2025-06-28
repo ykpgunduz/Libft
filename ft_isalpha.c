@@ -5,12 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 18:40:05 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/02 20:11:26 by yagunduz         ###   ########.fr       */
+/*   Created: 2025/06/28 13:46:29 by yagunduz          #+#    #+#             */
+/*   Updated: 2025/06/28 14:51:15 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <ctype.h>
 
 int	ft_isalpha(int c)
 {

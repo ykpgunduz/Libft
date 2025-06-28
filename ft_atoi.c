@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/28 13:46:32 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 14:51:12 by yagunduz         ###   ########.fr       */
+/*   Created: 2025/06/28 13:46:48 by yagunduz          #+#    #+#             */
+/*   Updated: 2025/06/28 14:50:49 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+int	ft_atoi(const char *str)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0'
-			&& c <= '9'))
+	int	sign;
+	int	result;
+
+	sign = 1;
+	result = 0;
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		return (1);
+		if (*str == '-')
+			sign = -1;
+		str++;
 	}
-	else
+	while (*str >= '0' && *str <= '9')
 	{
-		return (0);
+		result = result * 10 + (*str - '0');
+		str++;
 	}
+	return (result * sign);
 }

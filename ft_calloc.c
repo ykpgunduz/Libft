@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/28 13:46:32 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 14:51:12 by yagunduz         ###   ########.fr       */
+/*   Created: 2025/06/28 13:46:35 by yagunduz          #+#    #+#             */
+/*   Updated: 2025/06/28 14:51:02 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include <stdlib.h>
+#include <stddef.h>
+
+void	*ft_calloc(size_t count, size_t size)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0'
-			&& c <= '9'))
-	{
-		return (1);
-	}
-	else
-	{
+	void	*ptr;
+	size_t	i;
+
+	ptr = malloc(count * size);
+	if (!ptr)
 		return (0);
+	i = 0;
+	while (i < count * size)
+	{
+		((unsigned char *)ptr)[i] = 0;
+		i++;
 	}
+	return (ptr);
 }

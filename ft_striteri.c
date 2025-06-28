@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/28 13:46:32 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 14:51:12 by yagunduz         ###   ########.fr       */
+/*   Created: 2025/06/28 13:45:19 by yagunduz          #+#    #+#             */
+/*   Updated: 2025/06/28 13:45:20 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+void	ft_striteri(char *s, void(*f)(unsigned int, char *))
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0'
-			&& c <= '9'))
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	unsigned int i;
+	if(!s || !f)
+	return;
+	i = 0;
+	while(s[i])
+{
+	f(i, &s[i]);
+	i++;
+}
 }

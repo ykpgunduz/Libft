@@ -6,7 +6,7 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:46:39 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 15:03:01 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/07/02 19:45:27 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,5 @@
 
 void	ft_bzero(void *p, size_t n)
 {
-	size_t			i;
-	unsigned char	*ptr;
-
-	i = 0;
-	ptr = (unsigned char *)p;
-	while (i < n)
-	{
-		ptr[i] = 0;
-		i++;
-	}
+	ft_memset(p, 0, n);
 }

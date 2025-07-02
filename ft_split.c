@@ -6,7 +6,7 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:45:31 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/06/28 16:12:40 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/07/02 19:47:35 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,3 +61,5 @@ char	**ft_split(char const *s, char c)
 	result[i] = NULL;
 	return (result);
 }
+
+// free yok ????

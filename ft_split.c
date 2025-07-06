@@ -6,60 +6,92 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:45:31 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/07/02 19:47:35 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/07/06 18:36:59 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_words(char const *s, char c)
+static int	ft_arrlng(const char *s, char c)
 {
-	int	count;
-	int	in_word;
+	int	arrlng;
 
-	count = 0;
-	in_word = 0;
+	arrlng = 0;
+	while (*s && *s == c)
+		s++;
 	while (*s)
 	{
-		if (*s != c && !in_word)
-		{
-			in_word = 1;
-			count++;
-		}
-		else if (*s == c)
-			in_word = 0;
+		if (*s == c)
+			return (arrlng);
 		s++;
+		arrlng++;
+	}
+	return (arrlng);
+}
+
+static int	ft_findrow(char const *s, char c)
+{
+	int	count;
+	int	i;
+
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		if (s[i] != c && (i == 0 || s[i - 1] == c))
+			count++;
+		i++;
 	}
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static char	*ft_strncpy(char *dest, const char *src, size_t size)
 {
-	char	**result;
-	int		i;
-	int		start;
-	int		end;
+	size_t	i;
 
-	if (!s)
-		return (NULL);
-	result = malloc((count_words(s, c) + 1) * sizeof(char *));
-	if (!result)
-		return (NULL);
 	i = 0;
-	start = 0;
-	while (s[start])
+	while (*src && i < size)
 	{
-		while (s[start] && s[start] == c)
-			start++;
-		end = start;
-		while (s[end] && s[end] != c)
-			end++;
-		if (end > start)
-			result[i++] = ft_substr(s, start, end - start);
-		start = end;
+		dest[i] = *src++;
+		i++;
 	}
-	result[i] = NULL;
-	return (result);
+	dest[i] = '\0';
+	return (dest);
 }
 
-// free yok ????
+static char	**ft_freeall(char **arr, int i)
+{
+	while (i >= 0)
+		free(arr[i--]);
+	free(arr);
+	return (NULL);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	int		i;
+	char	**arr;
+
+	i = 0;
+	if (s == NULL)
+		return (NULL);
+	arr = malloc((ft_findrow(s, c) + 1) * sizeof(char *));
+	if (!arr)
+		return (NULL);
+	while (*s)
+	{
+		while (*s == c)
+			s++;
+		if (*s)
+		{
+			arr[i] = malloc(ft_arrlng(s, c) + 1);
+			if (!arr[i])
+				return (ft_freeall(arr, i - 1));
+			ft_strncpy(arr[i], s, ft_arrlng(s, c));
+			i++;
+			s += ft_arrlng(s, c);
+		}
+	}
+	arr[i] = NULL;
+	return (arr);
+}

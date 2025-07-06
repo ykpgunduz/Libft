@@ -6,7 +6,7 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:45:19 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/07/02 19:47:53 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/07/06 18:38:27 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-
-// tekil iteri kullanarak test1 test2 test3 stringi büyüt 

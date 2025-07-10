@@ -6,13 +6,13 @@
 /*   By: yagunduz <yagunduz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 13:46:39 by yagunduz          #+#    #+#             */
-/*   Updated: 2025/07/06 18:37:24 by yagunduz         ###   ########.fr       */
+/*   Updated: 2025/07/10 15:00:10 by yagunduz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *p, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(p, 0, n);
+	ft_memset(s, 0, n);
 }
